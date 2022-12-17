@@ -1,17 +1,21 @@
-import { Component } from 'react';
-import { PhonebookForm } from 'components/Phonebook/PhonebookForm';
-
+import React, { Component } from 'react';
+import {PhonebookForm} from './Phonebook/PhonebookForm';
 
 export class App extends Component {
 
   state = {
-  
+    contacts: [],
   };
+
+  formSubmitHandler = data => { 
+    console.log(data);
+  };
+  
+
+
   render() {
     return (
-      <PhonebookForm/>
-    )
-  }
- 
-
+      <PhonebookForm onSubmit={this.formSubmitHandler} />
+        )
+    }
 };
