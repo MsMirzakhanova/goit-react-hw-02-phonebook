@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Container} from './App.styled';
 import { PhonebookForm } from './Phonebook/PhonebookForm';
 import { ContactsList } from './Contacts/ContactsList';
 import { Filter } from './Filter/Filter';
@@ -67,14 +68,14 @@ const isNameInContact = this.state.contacts.find(
     const visibleContacts = this.getVisibleContacts();
     
     return (
-      <div>
+      <Container>
       <h1>Phonebook</h1>
         <PhonebookForm onSubmit={this.formSubmitHandler} />
-        <h2>My contacts</h2>
+        <h2>Contacts</h2>
         <Filter value={filter} onChange={this.changeFilter } />
         <ContactsList contacts={visibleContacts} onDeleteContact={this.deleteContact} />
         <Toaster />
-        </div>
+        </Container>
     );
     }
 };

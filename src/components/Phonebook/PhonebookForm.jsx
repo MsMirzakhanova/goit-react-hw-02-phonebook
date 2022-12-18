@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-// import PropTypes from 'prop-types';
+import { Form } from './Phonebook.styled';
+import PropTypes from 'prop-types';
 
 
 const shortid = require('shortid');
@@ -32,7 +33,8 @@ export class PhonebookForm extends Component {
   }
   render() {
     return (
-      <form autoComplete='off'
+     
+      <Form autoComplete='off'
   onSubmit={this.handleSubmit}>
 <label htmlFor={inputNameId}>Name</label>
 <input
@@ -57,9 +59,13 @@ export class PhonebookForm extends Component {
   required
 />
 <button type="submi" id={buttonId}>Add contact</button>
-</form>
+</Form>
     );
   }
 }
+
+PhonebookForm.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+};
 
 
