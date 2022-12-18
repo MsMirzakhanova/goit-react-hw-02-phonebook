@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 const shortid = require('shortid');
 const inputNameId = shortid.generate();
 const inputNumberId = shortid.generate();
+const buttonId = shortid.generate();
 
 export class PhonebookForm extends Component {
   state = {
@@ -54,7 +55,7 @@ export class PhonebookForm extends Component {
   title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
   required
 />
-<button type="submi">Add contact</button>
+<button type="submi" id={buttonId}>Add contact</button>
 </form>
     );
   }
