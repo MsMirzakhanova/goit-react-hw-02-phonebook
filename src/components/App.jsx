@@ -70,9 +70,9 @@ const isNameInContact = this.state.contacts.find(
     return (
       <Container>
       <h1>Phonebook</h1>
-        <PhonebookForm onSubmit={this.formSubmitHandler} />
+        <PhonebookForm onSubmit={this.formSubmitHandler}/>
         <h2>Contacts</h2>
-        <Filter value={filter} onChange={this.changeFilter } />
+        <Filter value={filter} onChange={this.changeFilter} />
         <ContactsList contacts={visibleContacts} onDeleteContact={this.deleteContact} />
         <Toaster />
         </Container>

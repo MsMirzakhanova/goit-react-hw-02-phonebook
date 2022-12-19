@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Form } from './Phonebook.styled';
+import { ContactInputForm } from './Phonebook.styled';
 import PropTypes from 'prop-types';
 
 
@@ -33,9 +33,7 @@ export class PhonebookForm extends Component {
   }
   render() {
     return (
-     
-      <Form autoComplete='off'
-  onSubmit={this.handleSubmit}>
+  <ContactInputForm autoComplete='off' onSubmit={this.handleSubmit}>
 <label htmlFor={inputNameId}>Name</label>
 <input
   type="text"
@@ -59,7 +57,7 @@ export class PhonebookForm extends Component {
   required
 />
 <button type="submi" id={buttonId}>Add contact</button>
-</Form>
+</ContactInputForm>
     );
   }
 }

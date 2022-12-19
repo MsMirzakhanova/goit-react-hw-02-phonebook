@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Form = styled.div`
+export const ContactInputForm = styled.form`
 border: 1px solid black;  
 display: block;
 padding: 10px;
