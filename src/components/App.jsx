@@ -68,9 +68,8 @@ const isNameInContact = this.state.contacts.find(
     }
 
   }
-  componentDidUpdate(prevProps, prevState) {
+  componentDidUpdate(prevState) {
     if (this.state.contacts !== prevState.contacts) {
-      console.log(`update Contacts`);
       localStorage.setItem(`contacts`, JSON.stringify(this.state.contacts));
 }
   };
