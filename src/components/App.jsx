@@ -59,8 +59,21 @@ const isNameInContact = this.state.contacts.find(
     return contacts.filter(contact =>
       contact.name.toLowerCase().includes(filterNormilized)
     );
-}
+  }
+  componentDidMount() {
+    const contacts = localStorage.getItem(`contacts`);
+    const parsedContatcs = JSON.parse(contacts);
+    if (parsedContatcs) {
+      this.setState({ contacts: parsedContatcs });
+    }
 
+  }
+  componentDidUpdate(prevProps, prevState) {
+    if (this.state.contacts !== prevState.contacts) {
+      console.log(`update Contacts`);
+      localStorage.setItem(`contacts`, JSON.stringify(this.state.contacts));
+}
+  };
   render() {
     
     const {filter} = this.state;
